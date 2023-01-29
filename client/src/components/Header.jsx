@@ -9,7 +9,7 @@ import menu from '../images/menu.svg';
 
 const Header = () => {
   return (
-    <>
+    <div className='entral'>
      <header className="header-top-strip py-3">
       <div className="container-xxl">
         <div className="row">
@@ -106,7 +106,7 @@ const Header = () => {
         </div>
       </div>
      </header>
-    </>
+    </div>
   )
 }
 
