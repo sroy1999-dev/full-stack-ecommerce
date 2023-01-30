@@ -11,6 +11,9 @@ import service3 from '../images/service-03.png';
 import service4 from '../images/service-04.png';
 import service5 from '../images/service-05.png';
 import products from '../products/Products';
+import Marquee from 'react-fast-marquee';
+import brands from '../products/brands';
+import Blogcard from '../components/Blogcard';
 
 const Home = () => {
   return (
@@ -131,6 +134,40 @@ const Home = () => {
               }
             </div>
           </div>
+        </div>
+      </div>
+     </section>
+     <section className='marquee-wrapper py-5'>
+      <div className="container-xxl">
+        <div className="row">
+          <div className="col-12">
+            <div className="marquee-inner-wrapper card-wrapper">
+              <Marquee className='d-flex'>
+                {
+                  brands.map((brand, index) => (
+                    <div className='mx-4 w-25'>
+                      <img key={index} src={brand.image} alt={brand.alternate} />
+                    </div>
+                  ))
+                }
+              </Marquee>
+            </div>
+          </div>
+        </div>
+      </div>
+     </section>
+     <section className='blog-wrapper py-5 home-wrapper-2'>
+      <div className="container-xxl">
+        <div className="row">
+          <div className="col-12">
+            <h3 className="section-heading">
+              Our latest blogs
+            </h3>
+          </div>
+          <Blogcard />
+          <Blogcard />
+          <Blogcard />
+          <Blogcard />
         </div>
       </div>
      </section>
